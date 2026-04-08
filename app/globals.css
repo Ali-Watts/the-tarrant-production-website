@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #F2EDE5;
+  --bg-secondary: #EAE4D9;
+  --bg-warm: #E2D8CA;
+  --bg-accent: #D5CEC3;
+  --bg-deep: #F7F3ED;
+  --clr-accent: #9B7650;
+  --clr-accent-hover: #7D5C3A;
+  --clr-accent-soft: rgba(155, 118, 80, 0.1);
+  --text-primary: #2E1F14;
+  --text-secondary: #5C4A3A;
+  --text-muted: #9A8D80;
+  --border: rgba(46, 31, 20, 0.07);
+  --border-strong: rgba(46, 31, 20, 0.12);
+  --nav-bg: rgba(242, 237, 229, 0.95);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-t-primary: var(--bg-primary);
+  --color-t-secondary: var(--bg-secondary);
+  --color-t-warm: var(--bg-warm);
+  --color-t-surface: var(--bg-accent);
+  --color-t-deep: var(--bg-deep);
+  --color-t-accent: var(--clr-accent);
+  --color-t-accent-hover: var(--clr-accent-hover);
+  --color-t-ink: var(--text-primary);
+  --color-t-ink-sub: var(--text-secondary);
+  --color-t-ink-muted: var(--text-muted);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Jost", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height%3D'100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* Ecwid widget resets */
+.ecwid-store-widget {
+  min-height: 400px;
 }
