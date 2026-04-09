@@ -1,0 +1,9 @@
+{
+  "type": "Page",
+  "slug": "/contact",
+  "hero": {
+    "overline": "Get in touch",
+    "heading": "Contact",
+    "email": "contact@thetarrantcollective.com"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "Page",
+  "slug": "/story",
+  "hero": {
+    "overline": "Our Story",
+    "heading": "The name Tarrant\ncarries lineage.",
+    "body": "It is chosen carefully, because everything here is."
+  },
+  "childhood": {
+    "heading": "It started with a stone\nin her hand.",
+    "paragraphs": [
+      "Katrina Phillips — Founder. The Tarrant Collective started where most considered things do — with a question, newly formed and without its answer.",
+      "From her earliest beginnings, Katrina has been drawn to objects with intention and story. Materials that, when listened to, reveal a quiet honesty of their own. The cool, smooth weight of a stone absentmindedly rolling in the palm of her hand. The natural patina of leather earned through movement and time. The uninterrupted grain of raw linen and silk. The enduring surfaces of worked brass. Each material revealing itself to the patient and attuned.",
+      "The intention and patience to learn became a practice, and the practice became The Tarrant — a precision carrying system built around the needs of a working designer. Every pocket, every panel considered. Nothing added without reason.",
+      "The name Tarrant honours a female lineage of steady, unmoving support. It is carried forward with the same intention."
+    ],
+    "image": "/images/craftsman-workshop.png",
+    "imageAlt": "Founder — atmospheric portrait"
+  },
+  "selfTaught": {
+    "heading": "Self-taught.\nMaterial-led.",
+    "paragraphs": [
+      "Self-taught across painting, moulding and leatherwork, everything made under the Tarrant name starts the same way: with curiosity about what a material could become in the hands.",
+      "The Tarrant Collective is a studio, not just a product. The site architecture allows for future products across different categories and materials — not limited to leather."
+    ],
+    "image": "/images/stitching-detail.png",
+    "imageAlt": "Hands working leather"
+  },
+  "values": {
+    "overline": "Our Values",
+    "heading": "What we stand for.",
+    "items": [
+      "Craftsmanship",
+      "Quality over Quantity",
+      "Timeless Design",
+      "Heritage Materials",
+      "Modern Function",
+      "Attention to Detail"
+    ]
+  }
+}

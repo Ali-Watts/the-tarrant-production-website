@@ -1,0 +1,83 @@
+{
+  "type": "Page",
+  "slug": "/",
+  "hero": {
+    "overline": "Hand-stitched leather",
+    "heading": "A new kind of\neveryday essential.",
+    "body": "The Tarrant. As intended. Resolved by design. Ready by intention. Every tool. One carrying system. Three colourways.",
+    "cta": "Shop The Origin",
+    "ctaLink": "/store",
+    "backgroundImage": "/images/three-colourways-closed.png",
+    "backgroundImageAlt": "Three colourways"
+  },
+  "brandStatement": {
+    "overline": "The Tarrant Collective",
+    "heading": "Not a bag. Not a case.\nA new category.",
+    "body": "Slim, deliberate, and precisely engineered. The Tarrant — Origin holds every essential a modern professional carries, and turns over to become a flat working surface. Made for those who would rather own one right thing than three adequate things."
+  },
+  "mosaic": {
+    "image1": "/images/buckle-closeup.png",
+    "image1Alt": "Cognac buckle — editorial portrait",
+    "image2": "/images/midnight-folio-standing.png",
+    "image2Alt": "Midnight — standing",
+    "image3": "/images/natural-open-folio.png",
+    "image3Alt": "Natural — leather grain"
+  },
+  "features": {
+    "overline": "Engineered for purpose",
+    "heading": "Every detail considered.",
+    "items": [
+      {
+        "title": "Full-Grain Leather",
+        "body": "Hand-stitched with contrast thread detail on darker colourways. Heritage material, modern precision."
+      },
+      {
+        "title": "Moulded Pockets",
+        "body": "A precision-engineered carry system. Each compartment shaped for a specific object. Not just stitched leather."
+      },
+      {
+        "title": "Dual Purpose",
+        "body": "Carry organiser. Work surface. One object, two modes. Flips over to become a flat, considered workspace."
+      },
+      {
+        "title": "D-Ring Hardware",
+        "body": "Carry strap attachment for on-the-move use. Confirms this travels — from desk to meeting to city."
+      },
+      {
+        "title": "Slim Profile",
+        "body": "Architectural lines. Looks like it holds nothing but holds everything. The opposite of bulk."
+      },
+      {
+        "title": "Holds Everything",
+        "body": "Laptop, stylus, phone, AirPods, charger, keys, glasses. One pocket system. Zero compromises."
+      }
+    ]
+  },
+  "craftsmanshipPreview": {
+    "overline": "Made by hand",
+    "heading": "The making is\nthe meaning.",
+    "body": "Self-taught across painting, moulding and leatherwork, everything made under the Tarrant name starts the same way: with curiosity about what a material could become in the hands.",
+    "linkText": "Our process",
+    "linkHref": "/craftsmanship",
+    "image": "/images/craftsman-workshop.png",
+    "imageAlt": "Making process — hands at work"
+  },
+  "testimonials": {
+    "overline": "Words",
+    "heading": "What people are saying.",
+    "items": [
+      {
+        "quote": "Customer review placeholder. Real testimonial to be provided by the client.",
+        "author": "Customer Name"
+      },
+      {
+        "quote": "Customer review placeholder. Real testimonial to be provided by the client.",
+        "author": "Customer Name"
+      },
+      {
+        "quote": "Customer review placeholder. Real testimonial to be provided by the client.",
+        "author": "Customer Name"
+      }
+    ]
+  }
+}
