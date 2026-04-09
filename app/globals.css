@@ -63,3 +63,16 @@ body::before {
 .ecwid-store-widget {
   min-height: 400px;
 }
+
+/* Force Ecwid single product buy buttons to left-align */
+.ecsp-SingleProduct-v2 {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.ecsp-SingleProduct-v2 .ecsp-SingleProduct-v2-centered {
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}

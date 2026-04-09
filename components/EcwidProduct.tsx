@@ -63,30 +63,29 @@ export default function EcwidProduct({ productId, productName }: EcwidProductPro
   }, [productId, productName])
 
   return (
-    <div className="relative">
-      {/* Placeholder button — visible until Ecwid loads */}
-      <div
-        className="transition-opacity duration-500"
-        style={{ opacity: loaded ? 0 : 1, pointerEvents: loaded ? 'none' : 'auto', position: loaded ? 'absolute' : 'relative' }}
-      >
-        <div
-          className="inline-flex items-center gap-3 px-8 py-3.5 text-[0.75rem] uppercase tracking-[0.16em] font-medium animate-pulse"
-          style={{
-            background: 'var(--text-primary)',
-            color: 'var(--bg-primary)',
-            fontFamily: 'var(--font-body)',
-          }}
-        >
-          Buy Now
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-spin">
-            <circle cx="12" cy="12" r="10" strokeDasharray="30 60" />
-          </svg>
+    <div className="relative" style={{ minHeight: 48 }}>
+      {/* Placeholder button — same position, fades out */}
+      {!loaded && (
+        <div className="absolute inset-0 z-10 flex items-start">
+          <div
+            className="inline-flex items-center gap-3 px-8 py-3.5 text-[0.75rem] uppercase tracking-[0.16em] font-medium animate-pulse"
+            style={{
+              background: 'var(--text-primary)',
+              color: 'var(--bg-primary)',
+              fontFamily: 'var(--font-body)',
+            }}
+          >
+            Buy Now
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="animate-spin">
+              <circle cx="12" cy="12" r="10" strokeDasharray="30 60" />
+            </svg>
+          </div>
         </div>
-      </div>
-      {/* Ecwid widget — injected via ref */}
+      )}
+      {/* Ecwid widget — same position, fades in, left-aligned */}
       <div
         ref={ref}
-        className="transition-opacity duration-500"
+        className="transition-opacity duration-500 [&_.ecsp-SingleProduct-v2]:!text-left [&_.ecsp-SingleProduct-v2]:!justify-start [&_.ecsp-SingleProduct-v2]:!items-start"
         style={{ opacity: loaded ? 1 : 0 }}
       />
     </div>
