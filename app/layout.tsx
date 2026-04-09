@@ -35,7 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${jost.variable}`}>
-      <body className="flex flex-col min-h-screen antialiased">
+      <head>
+        <link rel="preconnect" href="https://app.ecwid.com" />
+        <link rel="dns-prefetch" href="https://app.ecwid.com" />
+        <link rel="preconnect" href="https://images.ecwid.com" />
+        <link rel="dns-prefetch" href="https://images.ecwid.com" />
+      </head>
+      <body className="flex flex-col min-h-screen antialiased" suppressHydrationWarning>
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

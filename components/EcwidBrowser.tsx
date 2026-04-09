@@ -34,7 +34,7 @@ export default function EcwidBrowser({
     if (initialized.current) return
     initialized.current = true
 
-    const init = () => {
+    const applySettings = () => {
       window.ec = window.ec || { storefront: {} }
       window.ec.storefront = window.ec.storefront || {}
       const sf = window.ec.storefront
@@ -65,29 +65,46 @@ export default function EcwidBrowser({
       sf.product_details_position_share_buttons = 1000
       sf.product_details_position_subtitle = 600
       sf.product_details_show_subtitle = true
-
-      window.xProductBrowser(
-        'categoriesPerRow=3',
-        'views=grid(20,3) list(60) table(60)',
-        'categoryView=grid',
-        'searchView=list',
-        `defaultProductId=${productId}`,
-        `defaultSlug=${slug}`,
-        `id=${containerId}`
-      )
     }
+
+    // Poll for xProductBrowser — Ecwid defines it asynchronously after script load
+    const waitForBrowser = (onReady: () => void, attempts = 0) => {
+      if (typeof window.xProductBrowser === 'function') {
+        onReady()
+      } else if (attempts < 30) {
+        setTimeout(() => waitForBrowser(onReady, attempts + 1), 200)
+      }
+    }
+
+    const mountStore = () => {
+      applySettings()
+      waitForBrowser(() => {
+        window.xProductBrowser(
+          'categoriesPerRow=3',
+          'views=grid(20,3) list(60) table(60)',
+          'categoryView=grid',
+          'searchView=list',
+          `defaultProductId=${productId}`,
+          `defaultSlug=${slug}`,
+          `id=${containerId}`
+        )
+      })
+    }
+
+    // Apply settings early so the script can read them on load
+    applySettings()
 
     const existing = document.querySelector(
       `script[src*="app.ecwid.com/script.js?${STORE_ID}&data_platform=code"]`
     )
     if (existing) {
-      init()
+      mountStore()
     } else {
       const script = document.createElement('script')
       script.src = `https://app.ecwid.com/script.js?${STORE_ID}&data_platform=code&data_date=2026-04-08`
       script.charset = 'utf-8'
       script.dataset.cfasync = 'false'
-      script.onload = init
+      script.onload = mountStore
       document.head.appendChild(script)
     }
   }, [productId, slug, containerId, galleryLayout, sidebarDescription])

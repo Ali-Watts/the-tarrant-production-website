@@ -62,10 +62,16 @@ export default function StoryPage() {
               It started with a stone<br />in her hand.
             </h2>
             <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              As a child, she was deeply tactile — often found rolling a stone in her hand, making umbrellas out of ferns, pressing bark into sheets not yet knowing why — only that it had to be tried.
+              Katrina Phillips — Founder. The Tarrant Collective started where most considered things do — with a question, newly formed and without its answer.
             </p>
             <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-              That bark did not make fabric. But it made the base for paint. Failure, it turned out, was just the beginning of something else.
+              From her earliest beginnings, Katrina has been drawn to objects with intention and story. Materials that, when listened to, reveal a quiet honesty of their own. The cool, smooth weight of a stone absentmindedly rolling in the palm of her hand. The natural patina of leather earned through movement and time. The uninterrupted grain of raw linen and silk. The enduring surfaces of worked brass. Each material revealing itself to the patient and attuned.
+            </p>
+            <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+              The intention and patience to learn became a practice, and the practice became The Tarrant — a precision carrying system built around the needs of a working designer. Every pocket, every panel considered. Nothing added without reason.
+            </p>
+            <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+              The name Tarrant honours a female lineage of steady, unmoving support. It is carried forward with the same intention.
             </p>
           </div>
         </div>

@@ -33,7 +33,7 @@ export default function Home() {
             A new kind of<br />everyday essential.
           </h1>
           <p className="text-lg max-w-md leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-            Every device. One slim object. Three colourways. Made for the intentional person who carries with purpose.
+            The Tarrant. As intended. Resolved by design. Ready by intention. Every tool. One carrying system. Three colourways.
           </p>
           <div className="flex gap-6 items-center mt-2">
             <Link

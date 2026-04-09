@@ -31,7 +31,7 @@ export default function Footer() {
             >
               Shop
             </span>
-            {['The Origin', 'Midnight', 'Slate', 'Natural'].map((item) => (
+            {['Store', 'Midnight', 'Slate', 'Natural'].map((item) => (
               <Link
                 key={item}
                 href="/store"
