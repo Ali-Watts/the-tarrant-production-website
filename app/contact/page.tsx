@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getPageContent } from '@/lib/content'
+import ContactForm from '@/components/ContactForm'
 
 interface ContactContent {
   hero: { overline: string; heading: string; email: string }
@@ -35,80 +36,7 @@ export default function ContactPage() {
       {/* ── CONTACT FORM ── */}
       <section className="py-20 px-6" style={{ background: 'var(--bg-secondary)' }}>
         <div className="max-w-xl mx-auto">
-          <form name="contact" hidden>
-            <input type="text" name="first-name" />
-            <input type="text" name="last-name" />
-            <input type="email" name="email" />
-            <textarea name="message" />
-          </form>
-
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            className="flex flex-col gap-5"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <p className="hidden">
-              <label>Don&apos;t fill this out: <input name="bot-field" /></label>
-            </p>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-2">
-                <label htmlFor="first-name" className="text-[0.68rem] uppercase tracking-[0.18em]" style={{ color: 'var(--text-muted)' }}>
-                  First name
-                </label>
-                <input
-                  id="first-name" type="text" name="first-name" required
-                  className="w-full px-4 py-3 border-0 border-b text-sm outline-none transition-colors duration-200 focus:border-b-2"
-                  style={{ background: 'transparent', borderColor: 'var(--border-strong)', color: 'var(--text-primary)', fontFamily: 'var(--font-body)' }}
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="last-name" className="text-[0.68rem] uppercase tracking-[0.18em]" style={{ color: 'var(--text-muted)' }}>
-                  Last name
-                </label>
-                <input
-                  id="last-name" type="text" name="last-name" required
-                  className="w-full px-4 py-3 border-0 border-b text-sm outline-none transition-colors duration-200"
-                  style={{ background: 'transparent', borderColor: 'var(--border-strong)', color: 'var(--text-primary)', fontFamily: 'var(--font-body)' }}
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="email" className="text-[0.68rem] uppercase tracking-[0.18em]" style={{ color: 'var(--text-muted)' }}>
-                Email address
-              </label>
-              <input
-                id="email" type="email" name="email" required
-                className="w-full px-4 py-3 border-0 border-b text-sm outline-none"
-                style={{ background: 'transparent', borderColor: 'var(--border-strong)', color: 'var(--text-primary)', fontFamily: 'var(--font-body)' }}
-              />
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label htmlFor="message" className="text-[0.68rem] uppercase tracking-[0.18em]" style={{ color: 'var(--text-muted)' }}>
-                Your message
-              </label>
-              <textarea
-                id="message" name="message" required rows={6}
-                className="w-full px-4 py-3 border text-sm outline-none resize-none"
-                style={{ background: 'transparent', borderColor: 'var(--border-strong)', color: 'var(--text-primary)', fontFamily: 'var(--font-body)' }}
-              />
-            </div>
-
-            <div className="mt-2">
-              <button
-                type="submit"
-                className="inline-flex items-center gap-3 px-8 py-3.5 text-[0.75rem] uppercase tracking-[0.16em] font-medium transition-opacity duration-200 hover:opacity-80"
-                style={{ background: 'var(--text-primary)', color: 'var(--bg-primary)', fontFamily: 'var(--font-body)' }}
-              >
-                Send Message <span aria-hidden>→</span>
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
     </>
