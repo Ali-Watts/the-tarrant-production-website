@@ -3,8 +3,8 @@
   "slug": "/craftsmanship",
   "hero": {
     "overline": "Process",
-    "heading": "Made by hand.\nMade to last.",
-    "body": "A short film showing hand-stitching, moulding, and material selection is central to the brand story.",
+    "heading": "Designed by hand.\nMade to last.",
+    "body": "",
     "backgroundImage": "/images/craftsman-workshop.png",
     "backgroundImageAlt": "Craftsman at work"
   },
@@ -12,7 +12,7 @@
     {
       "number": "01",
       "heading": "Material Selection",
-      "body": "Full-grain leather chosen for character and durability. Each hide is unique — selected by hand for grain, weight, and feel.",
+      "body": "Top-grain leather chosen for character and durability. Each hide is unique — selected by hand for grain, weight, and feel.",
       "image": "/images/stitching-detail.png",
       "imageAlt": "Leather hides — material selection",
       "background": "warm",
@@ -20,17 +20,17 @@
     },
     {
       "number": "02",
-      "heading": "Moulding & Shaping",
-      "body": "The internal pocket system is precision-moulded — engineered, not just stitched. Each compartment shaped to hold a specific object with intention.",
+      "heading": "Molding & Shaping",
+      "body": "The internal pocket system is precision-molded — engineered, not just stitched. Each compartment shaped to hold a specific object with intention.",
       "image": "/images/natural-open-folio.png",
-      "imageAlt": "Moulding process — shaping leather",
+      "imageAlt": "Molding process — shaping leather",
       "background": "accent",
       "layout": "imageRight"
     },
     {
       "number": "03",
-      "heading": "Hand Stitching",
-      "body": "Every stitch placed by hand. Contrast thread on darker colourways for visible craft detail. No machines. No shortcuts. No exceptions.",
+      "heading": "Stitching",
+      "body": "Every stitch considered. Quality thread chosen for each colourway.",
       "image": "/images/buckle-closeup.png",
       "imageAlt": "Hand stitching — contrast thread",
       "background": "secondary",
@@ -39,7 +39,7 @@
   ],
   "video": {
     "overline": "Behind the scenes",
-    "body": "The making story is central. A short film showing hand-stitching, moulding, and material selection.",
+    "body": "The making story is central. A short film showing hand-stitching, molding, and material selection.",
     "image": "/images/craftsman-workshop.png",
     "imageAlt": "Making process film — behind the scenes"
   }
