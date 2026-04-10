@@ -10,33 +10,44 @@ interface EcwidProductProps {
 declare global {
   interface Window {
     xProduct: () => void
+    __ecwidCallbacks?: (() => void)[]
   }
 }
 
 const STORE_ID = '134195502'
-let scriptLoaded = false
-let scriptLoading = false
-const callbacks: (() => void)[] = []
+const SCRIPT_SRC = `https://app.ecwid.com/script.js?${STORE_ID}&data_platform=singleproduct_v2`
 
 function loadScript(cb: () => void) {
-  if (scriptLoaded) {
+  // Check if script already exists in DOM (e.g. after navigation)
+  const existing = document.querySelector(`script[src="${SCRIPT_SRC}"]`)
+  if (existing && typeof window.xProduct === 'function') {
     cb()
     return
   }
-  callbacks.push(cb)
-  if (scriptLoading) return
-  scriptLoading = true
+
+  // Check if xProduct is already available (script loaded by another route)
+  if (typeof window.xProduct === 'function') {
+    cb()
+    return
+  }
+
+  // Store callbacks on window to survive module re-evaluation
+  if (!window.__ecwidCallbacks) window.__ecwidCallbacks = []
+  window.__ecwidCallbacks.push(cb)
+
+  // Only append script once
+  if (existing) return
 
   const script = document.createElement('script')
-  script.src = `https://app.ecwid.com/script.js?${STORE_ID}&data_platform=singleproduct_v2`
+  script.src = SCRIPT_SRC
   script.charset = 'utf-8'
   script.setAttribute('data-cfasync', 'false')
   script.onload = () => {
-    scriptLoaded = true
     const poll = (attempts: number) => {
       if (typeof window.xProduct === 'function') {
-        callbacks.forEach((fn) => fn())
-        callbacks.length = 0
+        const cbs = window.__ecwidCallbacks || []
+        window.__ecwidCallbacks = []
+        cbs.forEach((fn) => fn())
       } else if (attempts < 50) {
         setTimeout(() => poll(attempts + 1), 100)
       }
