@@ -5,7 +5,7 @@ import { getPageContent } from '@/lib/content'
 interface CraftsmanshipContent {
   hero: { overline: string; heading: string; body: string; backgroundImage: string; backgroundImageAlt: string }
   steps: { number: string; heading: string; body: string; image: string; imageAlt: string; background: string; layout: string }[]
-  video: { overline: string; body: string; image: string; imageAlt: string }
+  behindTheScenes: { overline: string; images: { src: string; alt: string }[] }
 }
 
 const bgMap: Record<string, string> = {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function CraftsmanshipPage() {
   const content = getPageContent<CraftsmanshipContent>('craftsmanship')
-  const { hero, steps, video } = content
+  const { hero, steps, behindTheScenes } = content
 
   return (
     <>
@@ -77,25 +77,19 @@ export default function CraftsmanshipPage() {
         </section>
       ))}
 
-      {/* ── VIDEO ── */}
+      {/* ── BEHIND THE SCENES ── */}
       <section className="py-24 px-6" style={{ background: 'var(--bg-deep)' }}>
-        <div className="max-w-4xl mx-auto flex flex-col gap-8">
+        <div className="max-w-6xl mx-auto flex flex-col gap-8">
           <p className="text-[0.7rem] uppercase tracking-[0.25em] font-medium text-center" style={{ color: 'var(--text-muted)' }}>
-            {video.overline}
+            {behindTheScenes.overline}
           </p>
-          <div className="relative aspect-video overflow-hidden">
-            <Image src={video.image} alt={video.imageAlt} fill className="object-cover" />
-            <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'rgba(46,31,20,0.25)' }}>
-              <div className="w-16 h-16 rounded-full flex items-center justify-center border-2" style={{ borderColor: 'var(--bg-primary)', background: 'rgba(242,237,229,0.15)' }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style={{ color: 'var(--bg-primary)', marginLeft: 3 }}>
-                  <polygon points="5,3 19,12 5,21" />
-                </svg>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {behindTheScenes.images.map((img, i) => (
+              <div key={i} className="relative aspect-[4/5] overflow-hidden">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" />
               </div>
-            </div>
+            ))}
           </div>
-          <p className="text-sm text-center max-w-md mx-auto leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-            {video.body}
-          </p>
         </div>
       </section>
     </>

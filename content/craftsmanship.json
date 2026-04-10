@@ -37,10 +37,12 @@
       "layout": "imageLeft"
     }
   ],
-  "video": {
+  "behindTheScenes": {
     "overline": "Behind the scenes",
-    "body": "The making story is central. A short film showing hand-stitching, molding, and material selection.",
-    "image": "/images/craftsman-workshop.png",
-    "imageAlt": "Making process film — behind the scenes"
+    "images": [
+      { "src": "/images/stitching-detail.png", "alt": "Stitching detail" },
+      { "src": "/images/natural-open-folio.png", "alt": "Open folio" },
+      { "src": "/images/buckle-closeup.png", "alt": "Hardware detail" }
+    ]
   }
 }
