@@ -10,13 +10,13 @@
   },
   "products": [
     {
-      "name": "Midnight",
+      "name": "Anvil",
       "overline": "The Tarrant — Origin",
       "description": "Deep rich black, silver hardware, contrast white stitching. The statement piece. For those who lead with confidence.",
       "price": "$599 AUD",
       "ecwidProductId": 828421001,
       "mainImage": "/images/midnight-folio-flat.png",
-      "mainImageAlt": "Midnight — full portrait",
+      "mainImageAlt": "Anvil — full portrait",
       "detailImage1": "/images/tech-folio-black.png",
       "detailImage1Alt": "Tech folio detail",
       "detailImage2": "/images/buckle-closeup.png",
@@ -25,13 +25,13 @@
       "layout": "imageLeft"
     },
     {
-      "name": "Slate",
+      "name": "Cordovan",
       "overline": "The Tarrant — Origin",
       "description": "Complex cool charcoal, subtle and architectural. The quiet one. For those who let the work speak.",
       "price": "$599 AUD",
       "ecwidProductId": 828250988,
       "mainImage": "/images/charcoal-wallet.png",
-      "mainImageAlt": "Slate — full portrait",
+      "mainImageAlt": "Cordovan — full portrait",
       "detailImage1": "/images/stitching-detail.png",
       "detailImage1Alt": "Surface texture",
       "detailImage2": "/images/buckle-closeup.png",
@@ -40,13 +40,13 @@
       "layout": "imageRight"
     },
     {
-      "name": "Natural",
+      "name": "Parchment",
       "overline": "The Tarrant — Origin",
       "description": "Raw pale leather, gold hardware, extraordinary visible grain. The original. For those who see beauty in what's unfinished.",
       "price": "$599 AUD",
       "ecwidProductId": 828245250,
       "mainImage": "/images/natural-open-folio.png",
-      "mainImageAlt": "Natural — full portrait",
+      "mainImageAlt": "Parchment — full portrait",
       "detailImage1": "/images/stitching-detail.png",
       "detailImage1Alt": "Grain close-up",
       "detailImage2": "/images/buckle-closeup.png",

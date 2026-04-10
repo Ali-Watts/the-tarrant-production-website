@@ -19,17 +19,17 @@
     "image1": "/images/buckle-closeup.png",
     "image1Alt": "Cognac buckle — editorial portrait",
     "image2": "/images/midnight-folio-standing.png",
-    "image2Alt": "Midnight — standing",
+    "image2Alt": "Anvil — standing",
     "image3": "/images/natural-open-folio.png",
-    "image3Alt": "Natural — leather grain"
+    "image3Alt": "Parchment — leather grain"
   },
   "features": {
     "overline": "Engineered for purpose",
     "heading": "Every detail considered.",
     "items": [
       {
-        "title": "Full-Grain Leather",
-        "body": "Hand-stitched with contrast thread detail on darker colourways. Heritage material, modern precision."
+        "title": "Top Grain Leather",
+        "body": "Hand-stitched on 3 colourways. Traditional material, modern precision."
       },
       {
         "title": "Moulded Pockets",
@@ -54,16 +54,16 @@
     ]
   },
   "craftsmanshipPreview": {
-    "overline": "Made by hand",
+    "overline": "Made with intention",
     "heading": "The making is\nthe meaning.",
-    "body": "Self-taught across painting, moulding and leatherwork, everything made under the Tarrant name starts the same way: with curiosity about what a material could become in the hands.",
+    "body": "Each Tarrant begins as flat hides selected for grain quality and consistency. The leather is cut, then the five distinct leather forms are arranged in a single system. Architecture does not decorate. It proposes. The best objects work by the same logic.",
     "linkText": "Our process",
     "linkHref": "/craftsmanship",
     "image": "/images/craftsman-workshop.png",
     "imageAlt": "Making process — hands at work"
   },
   "testimonials": {
-    "overline": "Words",
+    "overline": "",
     "heading": "What people are saying.",
     "items": [
       {

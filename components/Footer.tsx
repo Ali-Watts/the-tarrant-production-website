@@ -19,7 +19,7 @@ export default function Footer() {
             <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
               Hand-stitched leather goods.
               <br />
-              Melbourne, Australia.
+              Brisbane, Australia.
             </p>
           </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
             >
               Shop
             </span>
-            {['Store', 'Midnight', 'Slate', 'Natural'].map((item) => (
+            {['Store', 'Anvil', 'Cordovan', 'Parchment'].map((item) => (
               <Link
                 key={item}
                 href="/store"
