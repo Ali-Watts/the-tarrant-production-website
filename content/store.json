@@ -3,7 +3,7 @@
   "slug": "/store",
   "hero": {
     "overline": "The Collection",
-    "heading": "The Tarrant — Origin",
+    "heading": "The Tarrant",
     "body": "One design. Three colourways. Choose yours.",
     "backgroundImage": "/images/three-colourways-closed.png",
     "backgroundImageAlt": "Three colourways"
@@ -11,8 +11,8 @@
   "products": [
     {
       "name": "Anvil",
-      "overline": "The Tarrant — Origin",
-      "description": "Deep rich black, silver hardware, contrast white stitching. The statement piece. For those who lead with confidence.",
+      "overline": "The Tarrant",
+      "description": "The tone between black and intention. Cool and uncompromising.",
       "price": "$599 AUD",
       "ecwidProductId": 828421001,
       "mainImage": "/images/midnight-folio-flat.png",
@@ -26,8 +26,8 @@
     },
     {
       "name": "Cordovan",
-      "overline": "The Tarrant — Origin",
-      "description": "Complex cool charcoal, subtle and architectural. The quiet one. For those who let the work speak.",
+      "overline": "The Tarrant",
+      "description": "Warmth from within. A mid-brown that moves when the light does.",
       "price": "$599 AUD",
       "ecwidProductId": 828250988,
       "mainImage": "/images/charcoal-wallet.png",
@@ -41,8 +41,8 @@
     },
     {
       "name": "Parchment",
-      "overline": "The Tarrant — Origin",
-      "description": "Raw pale leather, gold hardware, extraordinary visible grain. The original. For those who see beauty in what's unfinished.",
+      "overline": "The Tarrant",
+      "description": "A light neutral. Warm, settled, and unhurried.",
       "price": "$599 AUD",
       "ecwidProductId": 828245250,
       "mainImage": "/images/natural-open-folio.png",

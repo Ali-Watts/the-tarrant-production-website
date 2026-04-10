@@ -24,7 +24,7 @@ const bgMap: Record<string, string> = {
 }
 
 export const metadata: Metadata = {
-  title: 'The Origin — The Tarrant Collective',
+  title: 'Store — The Tarrant Collective',
   description: 'One design. Three colourways. Hand-stitched leather goods. Choose yours.',
 }
 

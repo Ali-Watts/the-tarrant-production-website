@@ -20,7 +20,7 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: 'The Tarrant Collective — Hand-Stitched Leather Goods',
   description:
-    'Slim, deliberate, and precisely engineered. The Tarrant — Origin holds every essential a modern professional carries. Hand-stitched leather goods, Melbourne, Australia.',
+    'Slim, deliberate, and precisely engineered. The Tarrant holds every essential a modern professional carries. Hand-stitched leather goods, Brisbane, Australia.',
   openGraph: {
     title: 'The Tarrant Collective',
     description: 'Hand-stitched leather goods. Melbourne, Australia.',
