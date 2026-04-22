@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import EcwidCartIcon from '@/components/EcwidCartIcon'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -52,55 +53,60 @@ export default function Nav() {
           />
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-10">
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className="relative text-[0.72rem] font-normal uppercase tracking-[0.18em] transition-colors duration-300 group"
-              style={{ color: pathname === href ? 'var(--text-primary)' : 'var(--text-secondary)' }}
-            >
-              {label}
-              <span
-                className="absolute bottom-0 left-0 h-px transition-all duration-300"
-                style={{
-                  background: 'var(--clr-accent)',
-                  width: pathname === href ? '100%' : '0',
-                }}
-              />
-            </Link>
-          ))}
-        </div>
+        {/* Right cluster: nav links, cart, mobile toggle */}
+        <div className="flex items-center gap-4 md:gap-6">
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-10">
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className="relative text-[0.72rem] font-normal uppercase tracking-[0.18em] transition-colors duration-300 group"
+                style={{ color: pathname === href ? 'var(--text-primary)' : 'var(--text-secondary)' }}
+              >
+                {label}
+                <span
+                  className="absolute bottom-0 left-0 h-px transition-all duration-300"
+                  style={{
+                    background: 'var(--clr-accent)',
+                    width: pathname === href ? '100%' : '0',
+                  }}
+                />
+              </Link>
+            ))}
+          </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className="block w-6 h-px transition-all duration-300"
-            style={{
-              background: 'var(--text-primary)',
-              transform: menuOpen ? 'translateY(5px) rotate(45deg)' : '',
-            }}
-          />
-          <span
-            className="block w-6 h-px transition-all duration-300"
-            style={{
-              background: 'var(--text-primary)',
-              opacity: menuOpen ? 0 : 1,
-            }}
-          />
-          <span
-            className="block w-6 h-px transition-all duration-300"
-            style={{
-              background: 'var(--text-primary)',
-              transform: menuOpen ? 'translateY(-5px) rotate(-45deg)' : '',
-            }}
-          />
-        </button>
+          <EcwidCartIcon />
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden flex flex-col gap-1.5 p-2"
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className="block w-6 h-px transition-all duration-300"
+              style={{
+                background: 'var(--text-primary)',
+                transform: menuOpen ? 'translateY(5px) rotate(45deg)' : '',
+              }}
+            />
+            <span
+              className="block w-6 h-px transition-all duration-300"
+              style={{
+                background: 'var(--text-primary)',
+                opacity: menuOpen ? 0 : 1,
+              }}
+            />
+            <span
+              className="block w-6 h-px transition-all duration-300"
+              style={{
+                background: 'var(--text-primary)',
+                transform: menuOpen ? 'translateY(-5px) rotate(-45deg)' : '',
+              }}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
