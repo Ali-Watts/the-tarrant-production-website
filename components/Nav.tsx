@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -40,14 +41,15 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-14 flex items-center justify-between">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex flex-col leading-none"
-          style={{ fontFamily: 'var(--font-playfair), serif' }}
-        >
-          <span className="text-[1.1rem] font-medium" style={{ color: 'var(--text-primary)' }}>
-            The Tarrant Collective
-          </span>
+        <Link href="/" className="flex items-center leading-none" aria-label="The Tarrant Collective — Home">
+          <Image
+            src="/images/tarrant-logo.png"
+            alt="The Tarrant Collective"
+            width={2103}
+            height={417}
+            priority
+            className="h-7 md:h-8 w-auto"
+          />
         </Link>
 
         {/* Desktop links */}
